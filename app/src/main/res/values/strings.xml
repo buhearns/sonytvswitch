@@ -12,7 +12,7 @@
     <string name="pref_control_file_key">SONYIPCONTROL_PREFERENCES</string>
 
     <string name="pref_copyright_title">Copyright</string>
-    <string name="pref_copyright">&#169; 2020 by andan</string>
+    <string name="pref_copyright">&#169; 2024 by andan</string>
 
     <string name="pref_app_license_title">License</string>
     <string name="pref_app_license_summary">Show license information</string>
@@ -48,7 +48,7 @@
     <string name="enable_wol_action">Enable Wake-on-LAN</string>
     <string name="check_set_host">Check connectivity</string>
 
-    <string name="channel_map_select_channel_text">Best matches, click item to change mapping</string>
+    <string name="channel_map_select_channel_text">Click item to change mapping.</string>
     <string name="dialog_ok">OK</string>
     <string name="menu_search">Search</string>
     <string name="menu_match_channels">Match with TV channels</string>
@@ -57,17 +57,20 @@
     <string name="menu_map_unmap">Unmap</string>
 
 
+    <string name="close_app">Close app</string>
+    <string name="open_help">Open help</string>
     <string name="menu_add_control">Add control</string>
     <string name="menu_manage_control">Manage control</string>
-    <string name="menu_show_channels">TV channel list</string>
-    <string name="menu_channel_map">TV Browser channel map</string>
-    <string name="menu_channel_map_fragment_label">TV Browser channel map</string>
+    <string name="menu_show_channels">TV channels</string>
+    <string name="channel_list_title">TV channels</string>
+    <string name="menu_channel_map">TVB channel mappings</string>
+    <string name="channel_map_title">Channel mappings</string>
     <string name="menu_help">Help</string>
     <string name="menu_settings">Settings</string>
 
 
     <string name="alert_no_active_control_title">No active control!</string>
-    <string name="alert_no_active_control_message">Add control first</string>
+    <string name="alert_no_active_control_message">A control needs to be added for using this app</string>
 
     <string name="alert_no_tvb_channels_title">No TV Browser channels!</string>
     <string name="alert_no_tvb_channels_message">Get channel list from TV Browser app by opening the plugin settings</string>
@@ -112,31 +115,28 @@
 
     <string name="add_control_host_title">Define host/ip address</string>
     <string name="add_control_host_check_title">Check connectivity</string>
-    <string name="add_control_host_instructions">
-        \u25BA Switch on Sony TV
-        \n\u25BA Enter host address of the TV into "IP/Host address" field
-        \n\u25BA Alternatively select discovered device (if found) from drop down box
-        \n\u25BA Click next
-        \n\u25BA See [Help] menu for more information
+    <string name="add_control_host_instructions">\u25AA Switch on Sony TV
+        \n\u25AA Enter host/IP address of the TV
+        \n\u25AA Alternatively select discovered device
+        \n\u25AA Click next
     </string>
     <string name="add_control_host_field_title">Host/IP address</string>
     <string name="add_control_host_discovered_devices">Discovered devices</string>
     <string name="add_control_host_neu">Test</string>
     <string name="add_control_host_neg">Cancel</string>
     <string name="add_control_host_pos">Next</string>
+    <string name="add_control_host_confirm">Next</string>
     <string name="add_control_host_check_pos">Set</string>
     <string name="add_control_host_failed_msg">Connectivity test failed.</string>
+    <string name="add_control_host_success_msg">Connectivity test succeeded.</string>
     <string name="add_control_host_testing_msg">Testing connectivity…</string>
 
 
-
     <string name="add_control_register_title">Register control</string>
-    <string name="add_control_register_instructions">
-        \u25BA Enter nickname for the control and a device name
-        \n\u25BA Enter pre-shared key as defined for your TV (optional)
-        \n\u25BA Click register
-        \n\u25BA Possibly enter challenge code if pre-shared key has not been defined
-        \n\u25BA See [Help] menu for more information
+    <string name="add_control_register_instructions">\u25AA Enter nickname for the control and a device name
+        \n\u25AA Enter pre-shared key as defined for your TV (optional)
+        \n\u25AA Click register
+        \n\u25AA Enter challenge code if pre-shared key has not been defined
     </string>
     <string name="add_control_register_unauthorized_challenge_message">Registration error. Please retry.</string>
     <string name="add_control_register_pos">Finish</string>
@@ -147,6 +147,25 @@
 
     <string name="pref_start_screen_label_control">Remote control</string>
     <string name="pref_start_screen_label_channels">Channel list</string>
-    <string name="pref_start_screen_value_control">control_screen</string>
-    <string name="pref_start_screen_value_channels">program_list_screen</string>
+    <string name="pref_start_screen_value_control">remote_control</string>
+    <string name="pref_start_screen_value_channels">channel_list</string>
+    <string name="title_activity_main2">Sony TV Switch</string>
+    <string name="switch_channel">Switch channels</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="search_clear_content_description">Clear search</string>
+    <string name="search_content_description">Search</string>
+    <string name="menu_list_channels">Channels</string>
+    <string name="search_channels">Search Channels</string>
+    <string name="back_search_channels">Exit Search View</string>
+    <string name="menu_more">More</string>
+    <string name="select_remote_controller_label">Select TV control</string>
+    <string name="add_control_step1">Add control: step 1</string>
+    <string name="add_control_specify_host_title">Specify host address of control</string>
+    <string name="add_control_host_invalid">Host address not valid</string>
+    <string name="playing_content_screen_title">Current program</string>
+    <string name="menu_match_single_channel">Map single channel</string>
+    <string name="add_control_host_registering_msg">Registering control</string>
+    <string name="fetch_all_data_action">Fetch data from TV</string>
+    <string name="search_placeholder">Search…</string>
+    <string name="menu_delete_map">Delete mapping</string>
 </resources>
