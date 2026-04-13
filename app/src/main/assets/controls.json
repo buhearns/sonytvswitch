@@ -13,7 +13,7 @@
       "systemMacAddr": "D8:D4:3C:4D:56:3D",
       "systemWolMode": true,
       "commandList": {
-        "PowerOff": "AAAAAQAAAAEAAAAvAw==",
+        "PowerOff": "AAAAAQAAAAEAAAAuAw==",
         "Input": "AAAAAQAAAAEAAAAlAw==",
         "GGuide": "AAAAAQAAAAEAAAAOAw==",
         "EPG": "AAAAAgAAAKQAAABbAw==",
@@ -73,7 +73,7 @@
         "SceneSelect": "AAAAAgAAABoAAAB4Aw==",
         "Mode3D": "AAAAAgAAAHcAAABNAw==",
         "iManual": "AAAAAgAAABoAAAB7Aw==",
-        "Audio": "AAAAAQAAAAEAAAAXAw==",
+        "Audio": "AAAAAgAAAMQAAAAkAw==",
         "Wide": "AAAAAgAAAKQAAAA9Aw==",
         "Jump": "AAAAAQAAAAEAAAA7Aw==",
         "PAP": "AAAAAgAAAKQAAAB3Aw==",
@@ -107,7 +107,9 @@
         "OneTouchTimeRec": "AAAAAgAAABoAAABkAw==",
         "OneTouchView": "AAAAAgAAABoAAABlAw==",
         "OneTouchRec": "AAAAAgAAABoAAABiAw==",
-        "OneTouchStop": "AAAAAgAAABoAAABjAw=="
+        "OneTouchStop": "AAAAAgAAABoAAABjAw==",
+        "TvPower": "AAAAAQAAAAEAAAAVAw==",
+        "Audiosystem": "AAAAAgAAAMQAAAAiAw=="
       },
       "sourceList": [
         "tv:dvbc",

@@ -77,7 +77,6 @@ android {
         aidl = true
         buildConfig = true
     }
-    buildToolsVersion = "34.0.0"
 
 }
 
