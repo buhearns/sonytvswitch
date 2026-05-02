@@ -173,7 +173,8 @@ object SonyServiceUtil {
   const val SONY_AV_CONTENT_ENDPOINT = "/sony/avContent"
   const val SONY_ACCESS_CONTROL_ENDPOINT = "/sony/accessControl"
   const val SONY_SYSTEM_ENDPOINT = "/sony/system"
-  const val SONY_IRCC_ENDPOINT = "/sony/IRCC"
+  const val SONY_IRCC_ENDPOINT = "/sony/ircc"
+  const val SONY_IRCC_ENDPOINT_LEGACY = "/sony/IRCC"
   const val SONY_IRCC_REQUEST_TEMPLATE =
       "<s:Envelope\n" +
           "    xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\"\n" +

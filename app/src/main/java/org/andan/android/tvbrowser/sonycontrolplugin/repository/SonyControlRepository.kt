@@ -467,12 +467,30 @@ constructor(
   }
 
   suspend fun sendCommand(command: String): Result<Any> {
-    val code = getActiveSonyControl()!!.commandMap[command]
+    val commandMap = getActiveSonyControl()!!.commandMap
+    var code = commandMap[command]
+    if (code.isNullOrBlank()) {
+      // Fallback to legacy command name for older Bravia models which report
+      // PowerOff/Input/Audio in their commandList instead of TvPower/TvInput/MediaAudioTrack.
+      val alias = LEGACY_COMMAND_ALIASES[command]
+      if (alias != null) {
+        code = commandMap[alias]
+        Timber.d("sendCommand: $command not found, falling back to legacy alias $alias")
+      }
+    }
     Timber.d("sendCommand: $command $code")
     if (!code.isNullOrBlank()) {
       return sendIRCC(code)
     }
     return Result.Error("No valid code for command: $command", -1)
+  }
+
+  companion object {
+    private val LEGACY_COMMAND_ALIASES = mapOf(
+        "TvPower" to "PowerOff",
+        "TvInput" to "Input",
+        "MediaAudioTrack" to "Audio",
+    )
   }
 
   suspend fun sendIRCC(code: String): Result<Any> {
@@ -485,11 +503,21 @@ constructor(
         val requestBody: RequestBody = requestBodyText.toRequestBody("text/xml".toMediaTypeOrNull())
         Timber.d("sendIRCC: $requestBodyText")
         try {
-          val response =
+          var response =
               api.sendIRCC(
                   "http://" + sessionManager.hostname + SonyServiceUtil.SONY_IRCC_ENDPOINT,
                   requestBody)
           Timber.d("response: $response")
+          if (!response.isSuccessful) {
+            // Fallback for older Bravia models whose nginx is case-sensitive
+            // and only accepts the uppercase /sony/IRCC path.
+            Timber.d("IRCC lowercase path failed (${response.code()}), trying legacy uppercase /sony/IRCC")
+            response =
+                api.sendIRCC(
+                    "http://" + sessionManager.hostname + SonyServiceUtil.SONY_IRCC_ENDPOINT_LEGACY,
+                    requestBody)
+            Timber.d("legacy response: $response")
+          }
           if (!response.isSuccessful) {
             Timber.e("IRCC send not successful: ${response.message()}")
             return@withContext Result.Error<Any>(

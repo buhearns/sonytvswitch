@@ -121,7 +121,7 @@ private fun RemoteControlContent() {
         Spacer(modifier = Modifier.height(24.dp))
         Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
           RemoteControlIconButton(
-              command = "Input", painter = painterResource(id = R.drawable.outline_input_24))
+              command = "TvInput", painter = painterResource(id = R.drawable.outline_input_24))
           RemoteControlTextButton(command = "GGuide", text = "GUIDE")
           RemoteControlTextButton(
               // modifier = Modifier.background(color=colorResource(id = R.color.buttonBlue)),
@@ -129,9 +129,23 @@ private fun RemoteControlContent() {
               backgroundColor = colorResource(id = R.color.buttonBlue),
               text = "SEN")
           RemoteControlIconButton(
-              command = "PowerOff",
+              command = "TvPower",
               backgroundColor = colorResource(id = R.color.buttonGreen),
               painter = painterResource(id = R.drawable.outline_power_settings_new_24))
+        }
+        Spacer(modifier = Modifier.height(8.dp))
+        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+          RemoteControlTextButton(
+              command = "WakeUp",
+              backgroundColor = colorResource(id = R.color.buttonGreen),
+              text = "ON")
+          RemoteControlTextButton(
+              command = "Sleep",
+              text = "OFF")
+          RemoteControlTextButton(
+              command = "Audiosystem",
+              backgroundColor = colorResource(id = R.color.buttonBlue),
+              text = "SPEAKER")
         }
         Spacer(modifier = Modifier.height(24.dp))
         Box(
@@ -425,7 +439,7 @@ private fun RemoteControlContent() {
               command = "ClosedCaption",
               painter = painterResource(id = R.drawable.ic_action_subtitle))
           RemoteControlTextButton(
-              command = "Audio",
+              command = "MediaAudioTrack",
               text = "AUDIO",
           )
           RemoteControlIconButton(

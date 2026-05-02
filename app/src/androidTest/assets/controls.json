@@ -107,7 +107,13 @@
         "OneTouchTimeRec": "AAAAAgAAABoAAABkAw==",
         "OneTouchView": "AAAAAgAAABoAAABlAw==",
         "OneTouchRec": "AAAAAgAAABoAAABiAw==",
-        "OneTouchStop": "AAAAAgAAABoAAABjAw=="
+        "OneTouchStop": "AAAAAgAAABoAAABjAw==",
+        "TvPower": "AAAAAQAAAAEAAAAVAw==",
+        "TvInput": "AAAAAQAAAAEAAAAlAw==",
+        "MediaAudioTrack": "AAAAAQAAAAEAAAAXAw==",
+        "Audiosystem": "AAAAAgAAAMQAAAAiAw==",
+        "WakeUp": "AAAAAQAAAAEAAAAuAw==",
+        "Sleep": "AAAAAQAAAAEAAAAvAw=="
       },
       "sourceList": [
         "tv:dvbc",
@@ -4790,7 +4796,13 @@
         "OneTouchTimeRec": "AAAAAgAAABoAAABkAw==",
         "OneTouchView": "AAAAAgAAABoAAABlAw==",
         "OneTouchRec": "AAAAAgAAABoAAABiAw==",
-        "OneTouchStop": "AAAAAgAAABoAAABjAw=="
+        "OneTouchStop": "AAAAAgAAABoAAABjAw==",
+        "TvPower": "AAAAAQAAAAEAAAAVAw==",
+        "TvInput": "AAAAAQAAAAEAAAAlAw==",
+        "MediaAudioTrack": "AAAAAQAAAAEAAAAXAw==",
+        "Audiosystem": "AAAAAgAAAMQAAAAiAw==",
+        "WakeUp": "AAAAAQAAAAEAAAAuAw==",
+        "Sleep": "AAAAAQAAAAEAAAAvAw=="
       },
       "programList": [
         {
