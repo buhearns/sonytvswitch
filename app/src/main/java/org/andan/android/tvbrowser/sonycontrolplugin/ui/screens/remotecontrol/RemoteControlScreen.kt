@@ -133,20 +133,6 @@ private fun RemoteControlContent() {
               backgroundColor = colorResource(id = R.color.buttonGreen),
               painter = painterResource(id = R.drawable.outline_power_settings_new_24))
         }
-        Spacer(modifier = Modifier.height(8.dp))
-        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-          RemoteControlTextButton(
-              command = "WakeUp",
-              backgroundColor = colorResource(id = R.color.buttonGreen),
-              text = "ON")
-          RemoteControlTextButton(
-              command = "Sleep",
-              text = "OFF")
-          RemoteControlTextButton(
-              command = "Audiosystem",
-              backgroundColor = colorResource(id = R.color.buttonBlue),
-              text = "SPEAKER")
-        }
         Spacer(modifier = Modifier.height(24.dp))
         Box(
             modifier =
